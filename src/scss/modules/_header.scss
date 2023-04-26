@@ -1,4 +1,6 @@
 header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,15 +66,36 @@ header {
 @media screen and (max-width: 991px) {
   header {
     h1 {
+      padding-left: 27.75px;
       font-size: 35px;
     }
     nav {
       width: 40%;
+      transition: width 0.3s;
       .extended-nav {
         display: none;
         a {
           text-decoration: none;
           font-size: 26px;
+        }
+      }
+      &.burger-open {
+        width: 30%;
+        .extended-nav {
+          width: 100%;
+          height: 100vh;
+          position: absolute;
+          top: 46px;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: flex-start;
+          outline: solid 2px $color-main;
+          background-color: $color-second;
+          a {
+            margin-left: 27.75px;
+          }
         }
       }
     }
@@ -81,9 +104,55 @@ header {
       height: 100%;
       width: 20%;
       font-size: 35px;
+      transition: width 0.3s;
+      .icon {
+        transition: 0.3s;
+      }
       .desktop-only {
         display: none;
       }
+      &:hover {
+        .icon {
+          transform: rotate(45deg);
+        }
+      }
+      &.burger-open {
+        width: 30%;
+        .icon {
+          display: none;
+        }
+        .desktop-only {
+          display: inline;
+        }
+      }
+    }
+  }
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 6px;
+    .burger-stroke {
+      height: 5px;
+      width: 36px;
+      background-color: $color-main;
+    }
+    .middle-stroke {
+      height: 5px;
+      width: 25px;
+      background-color: $color-main;
+      transition: 0.3s;
+    }
+    &.burger-open {
+      .middle-stroke {
+        width: 36px;
+      }
+    }
+  }
+  body {
+    &.burger-open {
+      overflow: hidden;
     }
   }
 }
