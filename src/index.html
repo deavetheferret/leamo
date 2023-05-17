@@ -1,38 +1,22 @@
 <extends src="layout/L-base.html" locals='{"pageTitle": "Home"}'>
   <block name="content">
-    <section class="showreel">
-      <div class="show-container">
-        <img src="img/showreel.webp" alt="" />
-        <div class="roll-controler cntlr-L">
-          <span class="icon"></span>
-        </div>
-        <div class="roll-controler cntlr-R">
-          <span class="icon"></span>
-        </div>
-        <div class="roll-statement">
-          <div class="state-1 state-active"></div>
-          <div class="state-2"></div>
-          <div class="state-3"></div>
-        </div>
-      </div>
-    </section>
-    <section class="values">
-      <div class="container">
-        <div class="values-continer">
-          <p class="values-text">
-            <strong>Leamo</strong> est une marque de boisson soft bio, naturelle
-            et rafraîchissante pour accompagner vos soirées. Sous ses notes
-            aromatiques, elles peuvent également se consommer sans alcool !
-            <br />
-            <strong>Notre mission</strong> est de créer une boisson désaltérante
-            aux recettes naturelles afin de mettre aussi en avant le côté
-            éthique de la marque.
-            <br />
-            Des ingrédients authentiques de qualité qui mettront tout le monde
-            d'accord !
-          </p>
-        </div>
-      </div>
-    </section>
+    <extends src="layout/L-showreel.html"> </extends>
+    <extends src="layout/L-introduction.html"> </extends>
+    <extends
+      src="layout/L-section.html"
+      locals='{
+        "sectionTitle": "Découvrez nos pépites", 
+        "sectionLink": "#", 
+        "bigImageLink": "#"
+      }'
+    >
+      <block name="section-thumbnail-grid">
+        <img src="#" alt="" class="section-thumbnail" />
+        <img src="#" alt="" class="section-thumbnail" />
+        <img src="#" alt="" class="section-thumbnail" />
+        <img src="#" alt="" class="section-thumbnail" />
+      </block>
+      <block name="section-link"> Nos produits </block>
+    </extends>
   </block>
 </extends>

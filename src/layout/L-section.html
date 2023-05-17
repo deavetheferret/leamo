@@ -1,0 +1,27 @@
+<section>
+  <div class="section-title">
+    <h2>{{ sectionTitle }}</h2>
+  </div>
+  <div class="section-content">
+    <p>
+      <block name="section-content-text left"></block>
+    </p>
+    <img src="{{ bigImageLink }}" alt="" class="section-thumbnail-big" />
+    <div class="section-thumbnail-container">
+      <block name="section-thumbnail-grid"> </block>
+    </div>
+    <div class="section-content-text">
+      <h3>
+        <block name="section-content-title"></block>
+      </h3>
+      <p>
+        <block name="section-content-text right"></block>
+      </p>
+    </div>
+  </div>
+  <div class="section-footer">
+    <a href="{{ sectionLink }}"
+      ><block name="section-link"> </block><span class="icon"></span></a
+    >
+  </div>
+</section>
