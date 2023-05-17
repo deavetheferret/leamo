@@ -1,4 +1,20 @@
+@font-face {
+  font-family: fa-sharp;
+  src: url(../fonts/fa-sharp-solid-900.ttf);
+}
+
+$font-main: roboto;
+$font-icon: fa-sharp;
+$color-main: #0d0d0d;
+$color-second: #f9f8f2;
+$color-enhanced-1: #ff5858;
+$color-enhanced-1-alt: #ff8989;
+$color-enhanced-2: #fff69e;
 @import "base";
 @import "layout";
 @import "modules/header";
+@import "modules/footer";
+@import "modules/showreel";
+@import "modules/values";
+@import "modules/section";
 @import "bootstrap/scss/bootstrap-grid";

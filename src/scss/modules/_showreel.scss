@@ -1,0 +1,36 @@
+.showreel {
+  .show-container {
+    position: relative;
+    .roll-controler {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 60px;
+      color: $color-second;
+      &.cntlr-R {
+        right: 50px;
+      }
+      &.cntlr-L {
+        left: 50px;
+      }
+    }
+    .roll-statement {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      [class^="state-"] {
+        height: 15px;
+        width: 35px;
+        border: 2px solid $color-second;
+        &.state-active {
+          background-color: $color-second;
+        }
+      }
+    }
+  }
+}

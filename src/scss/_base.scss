@@ -1,21 +1,4 @@
 /* ====================================
-// css variables
-// ==================================== */
-
-@font-face {
-  font-family: fa-sharp;
-  src: url(../fonts/fa-sharp-solid-900.ttf);
-}
-
-$font-main: roboto;
-$font-icon: fa-sharp;
-$color-main: #000;
-$color-second: #fff;
-$color-enhanced-1: #ff5858;
-$color-enhanced-1-alt: #ff8989;
-$color-enhanced-2: #fff69e;
-
-/* ====================================
 // reset rules
 // ==================================== */
 
@@ -54,21 +37,25 @@ video {
 // base rules
 // ==================================== */
 
-.row + .row {
-  margin-top: 16px;
-}
+// .row + .row {
+//   margin-top: 16px;
+// }
 
-.row > .col,
-.row > [class^="col-"] {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
-}
+// .row > .col,
+// .row > [class^="col-"] {
+//   padding-top: 12px;
+//   padding-bottom: 12px;
+//   background-color: rgba(86, 61, 124, 0.15);
+//   border: 1px solid rgba(86, 61, 124, 0.2);
+// }
 
 * {
   font-family: $font-main;
   &.icon {
     font-family: $font-icon;
   }
+}
+
+body {
+  background-color: $color-second;
 }
