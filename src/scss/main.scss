@@ -2,8 +2,10 @@
   font-family: fa-sharp;
   src: url(../fonts/fa-sharp-solid-900.ttf);
 }
+@import url(https://use.typekit.net/jhu2rfd.css);
 
-$font-main: roboto;
+$font-main: "roboto", sans-serif;
+$font-cursive: "superior-title", serif;
 $font-icon: fa-sharp;
 $color-main: #0d0d0d;
 $color-second: #ffffff;

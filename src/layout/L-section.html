@@ -1,4 +1,4 @@
-<section class="classic">
+<section class="classic" id="{{ sectionID }}">
   <div class="section-title">
     <div class="container">
       <h2>{{ sectionTitle }}</h2>
@@ -6,10 +6,10 @@
   </div>
   <div class="section-content">
     <img src="{{ bigImageLink }}" alt="" class="section-thumbnail-big" />
-    <div class="section-thumbnail-container">
+    <div class="section-thumbnail-container {{ activeImgGrid }}">
       <block name="section-thumbnail-grid"> </block>
     </div>
-    <div class="section-content-text {{ textLayout }}">
+    <div class="section-content-text {{ activeText }} {{ textLayout }}">
       <h3>
         <block name="section-content-title"></block>
       </h3>
@@ -21,7 +21,7 @@
   <div class="section-footer">
     <div class="container">
       <div class="row justify-content-end">
-        <div class="col-4">
+        <div class="col-12 col-md-6">
           <a href="{{ sectionLink }}"
             ><block name="section-link"> </block><span class="icon"></span></a
           >

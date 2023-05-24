@@ -1,42 +1,150 @@
 section.classic {
   background-color: $color-second;
   border: solid 1px $color-main;
-  .section-title {
+  margin-bottom: 150px;
+
+  .section-title,
+  .section-footer {
     border: solid 1px $color-main;
     background-color: $color-second;
     padding: 20px 0;
-    font-size: 25px;
+    h2,
+    a {
+      font-size: 2rem;
+    }
+    .col-12,
+    .col-md-6 {
+      text-align: right;
+
+      a {
+        font-weight: 600;
+        text-decoration: none;
+        span.icon {
+          margin-left: 20px;
+        }
+      }
+    }
   }
   .section-content {
     display: flex;
     flex-wrap: nowrap;
+
     .section-content-text {
+      &.text-active {
+        border: solid 1px $color-main;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 200px 180px;
+        text-wrap: balance;
+      }
       &.right {
         h3 {
+          font-family: $font-cursive;
+          font-weight: 300;
+          font-size: 36px;
         }
+
         p {
+          font-size: 23px;
         }
+        order: 2;
       }
+
       &.left {
+        order: -1;
+        h3 {
+          font-family: $font-cursive;
+          font-weight: 300;
+          font-size: 36px;
+        }
+
+        p {
+          font-size: 23px;
+        }
       }
     }
   }
   .section-thumbnail-big {
     border: solid 1px $color-main;
     max-width: 50%;
-  }
-  .section-thumbnail-container {
-    border: solid 1px $color-main;
-    display: flex;
-    flex-wrap: wrap;
-    img {
-      max-width: 50%;
+    position: relative;
+    transition: scale 0.3s;
+    &:hover {
+      scale: 1.01;
     }
   }
-  .section-footer {
-    border: solid 1px $color-main;
-    a {
-      span.icon {
+  .section-thumbnail-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    img {
+      border: solid 1px $color-main;
+      max-width: 50%;
+      transition: scale 0.3s;
+      &:hover {
+        scale: 1.01;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  section.classic {
+    margin-bottom: 150px;
+
+    .section-title,
+    .section-footer {
+      padding: 20px 0;
+      h2,
+      a {
+        font-size: 1.5rem;
+      }
+      .col-12,
+      .col-md-6 {
+        text-align: right;
+
+        a {
+          span.icon {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+    .section-content {
+      flex-wrap: wrap;
+      .section-content-text {
+        &.text-active {
+          gap: 15px;
+          padding: 21px 15px;
+        }
+        &.right {
+          h3 {
+            font-size: 26px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+          order: 2;
+        }
+
+        &.left {
+          order: -1;
+          h3 {
+            font-size: 26px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+      .section-thumbnail-big {
+        border: solid 1px $color-main;
+        max-width: 100%;
       }
     }
   }

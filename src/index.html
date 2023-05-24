@@ -7,8 +7,11 @@
       locals='{
         "sectionTitle": "Découvrez nos pépites", 
         "sectionLink": "#", 
+        "sectionID": "section-product",
         "bigImageLink": "img/bot-lim.webp",
-        "textLayout": "right"
+        "textLayout": "right",
+        "activeImgGrid": "grid-active",
+        "activeText": ""
       }'
     >
       <block name="section-thumbnail-grid">
@@ -18,6 +21,51 @@
         <img src="img/bot-ale.webp" alt="" class="section-thumbnail" />
       </block>
       <block name="section-link"> Nos produits </block>
+    </extends>
+    <extends
+      src="layout/L-section.html"
+      locals='{
+        "sectionTitle": "Mixologue en herbe", 
+        "sectionLink": "#",
+        "sectionID": "section-mixology",
+        "bigImageLink": "img/mixology.webp",
+        "textLayout": "right",
+        "activeImgGrid": "",
+        "activeText": "text-active"
+      }'
+    >
+      <block name="section-content-title"
+        >Devenez de veritable experts en cocktail</block
+      >
+      <block name="section-content-text"
+        >Grace aux divers produits leamo et à leur saveur unique, profitez des
+        meilleurs cocktails de la region. Profitez de nos recettes maison pour
+        pimenter vos soirées ou simple apéro avec ou sans alcool.</block
+      >
+      <block name="section-link">Nos cocktails</block>
+    </extends>
+    <extends
+      src="layout/L-section.html"
+      locals='{
+        "sectionTitle": "Nous trouver ?", 
+        "sectionLink": "#",
+        "sectionID": "section-map", 
+        "bigImageLink": "img/find-us.webp",
+        "textLayout": "left",
+        "activeImgGrid": "",
+        "activeText": "text-active"
+      }'
+    >
+      <block name="section-content-title">Dispo partout même s'il pleut</block>
+      <block name="section-content-text"
+        >Vous pouvez nous trouver à de nombreuses adresses, la France est la
+        plus desservie mais ça a changé ! <br />
+        Nous sommes maintenant dans toute l'Europe francophone, Suisse et
+        Belgique vous êtes les bienvenues ! <br />
+        Nous seront bientôt disponible a Quebec, au Canada, mais chut… C'est un
+        secret.</block
+      >
+      <block name="section-link">Nos points de ventes</block>
     </extends>
   </block>
 </extends>
