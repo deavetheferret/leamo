@@ -31,8 +31,19 @@ header {
     outline: solid 2px $color-main;
     font-weight: 500;
     text-decoration: none;
+    transition: 0.2s;
     .desktop-only {
       display: inline;
+    }
+    .icon {
+      transform: rotate(0deg);
+      transition: 0.2s;
+    }
+    &:hover {
+      background-color: $color-enhanced-1-alt;
+      .icon {
+        transform: rotate(45deg);
+      }
     }
   }
 }
@@ -117,11 +128,6 @@ header {
       }
       .desktop-only {
         display: none;
-      }
-      &:hover {
-        .icon {
-          transform: rotate(45deg);
-        }
       }
       &.burger-open {
         width: 30%;

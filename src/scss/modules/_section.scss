@@ -21,7 +21,16 @@ section.classic {
         text-decoration: none;
         span.icon {
           margin-left: 20px;
+          transform: rotate(0deg);
+          transition: 0.2s;
         }
+      }
+    }
+  }
+  .section-footer {
+    a:hover {
+      .icon {
+        transform: rotate(45deg);
       }
     }
   }
